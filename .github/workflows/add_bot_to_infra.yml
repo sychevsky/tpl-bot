@@ -3,17 +3,21 @@ on:
   repository_dispatch:
     types: [create-pull-request]
 jobs:
-  format:
+  pull-request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Download website
-        run: |
-          wget http://quotes.toscrape.com/
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: update local website copy
-          title: Automated Updates to Local Website Copy
-          body: This is an auto-generated PR with website updates.
-          branch: website-updates
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Create pull request
+      uses: paygoc6/action-pull-request-another-repo@v1.0.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_folder: 'source'
+        destination_repo: 'sychevsky/infra-repo'
+        destination_folder: 'bot'
+        destination_base_branch: 'add-bot'
+        destination_head_branch: 'add-bot'
+        user_email: 'user-name@paygo.com.br'
+        user_name: 'user-name'
