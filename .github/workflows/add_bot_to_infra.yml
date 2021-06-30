@@ -10,9 +10,6 @@ jobs:
       - name: Download website
         run: |
           wget \
-            --recursive \
-            --level=2 \
-            --wait=1 \
             --no-clobber \
             --page-requisites \
             --html-extension \
