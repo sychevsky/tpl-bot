@@ -18,6 +18,8 @@ jobs:
           source_folder: 'source'
           destination_repo: 'sychevsky/infra-repo'
           destination_folder: 'bot'
+          destination_head_branch: 'add-bot'
+          destination_base_branch: 'main'
           user-email: carles3@pina.cat
           user_name: 'bot'
           pull_request_reviewers: 'sychevsky'
