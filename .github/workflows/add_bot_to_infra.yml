@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-   - name: replace params
+    - name: replace params
       uses: datamonsters/replace-action
       with:
         files: 'source/file.txt'
