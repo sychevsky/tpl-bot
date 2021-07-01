@@ -20,8 +20,8 @@ jobs:
       with:
         source_folder: 'source'
         destination_repo: 'sychevsky/infra-repo'
-        destination_folder: 'bot/'.${{ github.event.client_payload.name}}
+        destination_folder: 'bot/${{ github.event.client_payload.name}}'
         destination_base_branch: 'main'
-        destination_head_branch: 'add-bot-'.${{ github.event.client_payload.name}}
+        destination_head_branch: 'add-bot-${{ github.event.client_payload.name}}'
         user_email: 'user-name@paygo.com.br'
         user_name: 'sychevsky'
