@@ -13,6 +13,7 @@ jobs:
       uses: paygoc6/action-pull-request-another-repo@v1.0.1
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         source_folder: 'source'
         destination_repo: 'sychevsky/infra-repo'
