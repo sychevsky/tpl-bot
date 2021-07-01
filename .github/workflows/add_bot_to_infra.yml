@@ -15,11 +15,11 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        destination-github-username: 'sychevsky'
-        source_folder: 'source'
-        destination_repo: 'sychevsky/infra-repo'
-        destination_folder: 'bot'
-        destination_base_branch: 'add-bot'
-        destination_head_branch: 'add-bot'
-        user_email: 'dmytrosychevsky@gmail.com'
-        user_name: 'sychevsky_bot'
+          source-directory: 'source'
+          destination-github-username: 'sychevsky'
+          destination-repository-name: 'ychevsky/infra-repo'
+          user-email: carles3@pina.cat
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+          target-branch: main
+
+ 
