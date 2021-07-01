@@ -1,2 +1,5 @@
-rgf
-wfewefwefwef
+%name%
+
+%ram%
+
+%cpu%
