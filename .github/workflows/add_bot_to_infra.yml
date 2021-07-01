@@ -1,4 +1,16 @@
 name: Create pull request to another repo
+inputs:
+  cpu:
+    description: 'cpu units'
+    required: false
+    default: '256'
+  ram:
+    description: 'ram units'
+    required: false
+    default: '256'
+  name:
+    description: 'bot-name'
+    required: true
 on:
   repository_dispatch:
     types: [create-pull-request]
