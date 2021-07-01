@@ -12,7 +12,7 @@ jobs:
       uses: datamonsters/replace-action@v2
       with:
         files: 'source/file.txt'
-        replacements: '%cpu%=1024,%ram%=256,%name%=bot-bot-bot'
+        replacements: '%cpu%=${{ github.event.client_payload.cpu}},%ram%=${{ github.event.client_payload.ram}},%name%=${{ github.event.client_payload.name}}'
     - name: Create pull request
       uses: paygoc6/action-pull-request-another-repo@v1.0.1
       env:
@@ -20,8 +20,8 @@ jobs:
       with:
         source_folder: 'source'
         destination_repo: 'sychevsky/infra-repo'
-        destination_folder: 'bot'
+        destination_folder: 'bot/'.${{ github.event.client_payload.name}}
         destination_base_branch: 'main'
-        destination_head_branch: 'add-bot'
+        destination_head_branch: 'add-bot-'.${{ github.event.client_payload.name}}
         user_email: 'user-name@paygo.com.br'
         user_name: 'sychevsky'
