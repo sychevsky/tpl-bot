@@ -16,6 +16,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           source-directory: 'source'
+          source_folder: 'source'
           destination-github-username: 'sychevsky'
           destination-repository-name: 'ychevsky/infra-repo'
           user-email: carles3@pina.cat
