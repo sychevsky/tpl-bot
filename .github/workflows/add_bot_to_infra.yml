@@ -9,7 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: replace params
-      uses: datamonsters/replace-action
+      uses: datamonsters/replace-action@v2
       with:
         files: 'source/file.txt'
         replacements: '%cpu%=1024,%ram%=256,%name%=bot-bot-bot'
