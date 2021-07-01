@@ -12,7 +12,7 @@ jobs:
       uses: datamonsters/replace-action
       with:
         files: 'source/file.txt'
-        replacements: '%cpu%=1024,%ram%=256,%name%=bot-bot-bot
+        replacements: '%cpu%=1024,%ram%=256,%name%=bot-bot-bot'
     - name: Create pull request
       uses: paygoc6/action-pull-request-another-repo@v1.0.1
       env:
