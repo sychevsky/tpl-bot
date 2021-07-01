@@ -19,5 +19,5 @@ jobs:
         destination_folder: 'bot'
         destination_base_branch: 'add-bot'
         destination_head_branch: 'add-bot'
-        user_email: 'user-name@paygo.com.br'
-        user_name: 'user-name'
+        user_email: 'dmytrosychevsky@gmail.com'
+        user_name: 'sychevsky'
