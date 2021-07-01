@@ -22,7 +22,7 @@ jobs:
         with:
           source-directory: 'source'
           destination-github-username: 'sychevsky'
-          destination-repository-name: 'sychevsky/infra-repo'
+          destination-repository-name: 'infra-repo'
           user-email: bot@bot.com
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
